@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getAll(){
-        MyOk.post("dataInterface/UserWorkEnvironmental/getAll", null, new Callback() {
+        MyOk.post("dataInterface/UserWorkEnvironmental/getAll", "", new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 //切换UI线程执行UI操作
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                Log.d("MainActivity", response.body().string());
+                Log.d("MainActivity111", response.body().string());
                 //切换UI线程执行UI操作
                 runOnUiThread(new Runnable() {
                     @Override
